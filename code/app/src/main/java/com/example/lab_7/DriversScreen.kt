@@ -1,4 +1,8 @@
 package com.example.lab_7
 
-class DriversScreen {
+import androidx.compose.runtime.Composable
+import androidx.navigation.NavController
+
+@Composable
+fun DriversScreen (navController: NavController){
 }
