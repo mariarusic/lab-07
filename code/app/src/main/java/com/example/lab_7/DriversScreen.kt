@@ -1,12 +1,18 @@
 package com.example.lab_7
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
@@ -41,6 +47,17 @@ fun DriversScreen (navController: NavController){
         ) {
             Text("Back")
         }
+        Spacer(modifier = Modifier.height(16.dp))
+
+        // clear all button
+        Button(
+            onClick = {
+                driverNameList.clear()
+            },
+            modifier = Modifier.testTag("clearAllButton") // for testing
+        ) {
+            Text("Clear All Drivers")
+        }
 
         Spacer(modifier = Modifier.height(16.dp))
 
@@ -50,6 +67,53 @@ fun DriversScreen (navController: NavController){
             fontSize = 30.sp
         )
 
+
         Spacer(modifier = Modifier.height(16.dp))
+
+
+
+            // text field and button to add race locations
+            Row (
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                TextField(
+                    value = driverName,
+                    onValueChange = {
+                        driverName = it // update location to new value
+                    },
+                    label = {
+                        Text("Add Driver Name")
+                    },
+                    modifier = Modifier.testTag("driverInput") // for testing
+                )
+
+                Spacer(modifier = Modifier.height(8.dp))
+
+                Button(
+                    onClick = {
+                        if (driverName.isNotBlank()) {
+                            driverNameList.add(driverName)
+                            driverName = ""
+                        }
+                    },
+                    modifier = Modifier.testTag("addDriverButton") // for testing
+                ) {
+                    Text("Add")
+                }
+            }
+
+            // list to display races
+            LazyColumn {
+                items(driverNameList) { race ->
+                    Spacer(modifier = Modifier.height(12.dp))
+
+                    Text(
+                        text = race,
+                        fontSize = 24.sp
+                    )
+                }
+            }
+
     }
 }
