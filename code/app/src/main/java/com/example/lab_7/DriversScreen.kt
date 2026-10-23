@@ -63,7 +63,7 @@ fun DriversScreen (navController: NavController){
 
         // title text
         Text(
-            text = "Racecar Drivers",
+            text = "FormulaZero Drivers",
             fontSize = 30.sp
         )
 

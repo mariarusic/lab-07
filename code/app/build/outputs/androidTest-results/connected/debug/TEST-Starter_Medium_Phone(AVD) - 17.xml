@@ -1,9 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<testsuites tests="1" failures="0" errors="0" skipped="0" time="0.000" timestamp="2026-10-22T16:13:23" hostname="localhost">
-  <testsuite name="com.example.lab_7.FormulaZeroTest" tests="1" failures="0" errors="0" skipped="0" time="14.636" timestamp="2026-10-22T16:13:23" hostname="localhost">
+<testsuites tests="2" failures="0" errors="0" skipped="0" time="0.000" timestamp="2026-10-23T01:39:30" hostname="localhost">
+  <testsuite name="com.example.lab_7.FormulaZeroTest" tests="2" failures="0" errors="0" skipped="0" time="32.438" timestamp="2026-10-23T01:39:30" hostname="localhost">
     <properties>
       <property name="device" value="emulator-5554" />
     </properties>
-    <testcase name="navigate_to_races_add_race_and_return_home" classname="com.example.lab_7.FormulaZeroTest" time="14.636" />
+    <testcase name="navigate_to_drivers_add_driver_clear_and_return_home" classname="com.example.lab_7.FormulaZeroTest" time="17.262" />
+    <testcase name="navigate_to_races_add_race_and_return_home" classname="com.example.lab_7.FormulaZeroTest" time="15.176" />
   </testsuite>
 </testsuites>

@@ -1,4 +1,9 @@
-¸
+Ì
+Z
+FormulaZeroTestcom.example.lab_74navigate_to_drivers_add_driver_clear_and_return_home"ë
+
+logcatandroidÕ
+ÒD:\Android\LABS\lab-07\code\app\build\outputs\androidTest-results\connected\debug\Starter_Medium_Phone(AVD) - 17\logcat-com.example.lab_7.FormulaZeroTest-navigate_to_drivers_add_driver_clear_and_return_home.txt¸
 P
 FormulaZeroTestcom.example.lab_7*navigate_to_races_add_race_and_return_home"á
 
