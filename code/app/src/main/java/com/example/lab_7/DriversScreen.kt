@@ -72,7 +72,7 @@ fun DriversScreen (navController: NavController){
 
 
 
-            // text field and button to add race locations
+            // text field and button to add drivers
             Row (
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween
@@ -80,7 +80,7 @@ fun DriversScreen (navController: NavController){
                 TextField(
                     value = driverName,
                     onValueChange = {
-                        driverName = it // update location to new value
+                        driverName = it // update driver
                     },
                     label = {
                         Text("Add Driver Name")
@@ -103,7 +103,7 @@ fun DriversScreen (navController: NavController){
                 }
             }
 
-            // list to display races
+            // list to display driver names
             LazyColumn {
                 items(driverNameList) { race ->
                     Spacer(modifier = Modifier.height(12.dp))
